@@ -1,4 +1,4 @@
-const CACHE_NAME = "lash-atelier-v5";
+const CACHE_NAME = "lash-atelier-v7";
 const APP_FILES = [
   "./",
   "./index.html",
@@ -8,6 +8,8 @@ const APP_FILES = [
   "./app.js",
   "./manifest.webmanifest",
   "./icon.svg",
+  "./lash-hero-web.jpg",
+  "./lash-detail-web.jpg",
   "./assets/lash-hero-web.jpg",
   "./assets/lash-detail-web.jpg",
 ];

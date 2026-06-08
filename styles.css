@@ -181,6 +181,7 @@ main {
   background:
     linear-gradient(90deg, rgba(16, 16, 20, 0.9) 0%, rgba(16, 16, 20, 0.68) 39%, rgba(16, 16, 20, 0.16) 72%),
     linear-gradient(0deg, rgba(16, 16, 20, 0.78), rgba(16, 16, 20, 0.06) 48%, rgba(16, 16, 20, 0.28)),
+    url("lash-hero-web.jpg"),
     url("assets/lash-hero-web.jpg");
   background-size: cover;
   background-position: center;
@@ -954,6 +955,7 @@ textarea:focus {
     border-radius: 0.85rem;
     background:
       linear-gradient(0deg, rgba(16, 16, 20, 0.9), rgba(16, 16, 20, 0.3) 58%, rgba(16, 16, 20, 0.24)),
+      url("lash-hero-web.jpg"),
       url("assets/lash-hero-web.jpg");
     background-size: cover;
     background-position: 58% center;

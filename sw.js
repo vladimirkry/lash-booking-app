@@ -1,4 +1,4 @@
-const CACHE_NAME = "lash-atelier-v7";
+const CACHE_NAME = "lash-atelier-v10";
 const APP_FILES = [
   "./",
   "./index.html",
@@ -6,12 +6,12 @@ const APP_FILES = [
   "./admin.html",
   "./styles.css",
   "./app.js",
+  "./config.js",
+  "./database.js",
   "./manifest.webmanifest",
   "./icon.svg",
   "./lash-hero-web.jpg",
   "./lash-detail-web.jpg",
-  "./assets/lash-hero-web.jpg",
-  "./assets/lash-detail-web.jpg",
 ];
 
 self.addEventListener("install", (event) => {

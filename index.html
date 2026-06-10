@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#101014" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="Lash Atelier" />
-    <title>Lash Atelier | Online Booking</title>
+    <meta
+      name="description"
+      content="Онлайн-запис на нарощення вій 2D, 3D, 4D та 5D з кабінетом адміністратора."
+    />
+    <title>Lash Atelier | Онлайн-запис</title>
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="icon" href="icon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
@@ -22,9 +23,9 @@
       </a>
 
       <div class="top-actions">
-        <label class="language-picker">
+        <label class="language-picker" for="language-select">
           <span data-i18n="language">Мова</span>
-          <select id="language-select">
+          <select id="language-select" aria-label="Language">
             <option value="uk">Українська</option>
             <option value="pl">Polski</option>
             <option value="nl">Nederlands</option>
@@ -32,7 +33,7 @@
           </select>
         </label>
 
-        <nav class="nav-tabs" aria-label="Navigation">
+        <nav class="nav-tabs" aria-label="Навігація">
           <a href="#client" data-route="client" data-i18n="navBooking">Запис</a>
           <a href="#admin" data-route="admin" data-i18n="navAdmin">Кабінет</a>
           <a href="#share" data-route="share" data-i18n="navShare">QR / Посилання</a>
@@ -43,16 +44,20 @@
     <main>
       <section id="client-view" class="view client-layout" aria-labelledby="booking-title">
         <aside class="studio-hero">
-          <div class="hero-art" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
+          <div class="hero-photo-wrap">
+            <img
+              class="hero-photo"
+              src="lash-hero-web.jpg"
+              alt="Матеріали та інструменти для нарощення вій"
+              onerror="this.onerror=null; this.src='assets/lash-hero-web.jpg';"
+            />
           </div>
+
           <div class="hero-content">
             <p class="eyebrow" data-i18n="heroEyebrow">Lash studio booking</p>
-            <h1 id="booking-title" data-i18n="heroTitle">Обери час - ми подбаємо про погляд</h1>
+            <h1 id="booking-title" data-i18n="heroTitle">Запишіться на вії, які підкреслять ваш погляд</h1>
             <p data-i18n="heroCopy">
-              Онлайн-запис на нарощення вій 2D-5D. Зручний час, охайна робота і результат, який підкреслює саме вас.
+              Нарощення вій 2D-5D з акуратним підбором об'єму, вигину та довжини під вашу форму очей.
             </p>
             <div class="hero-badges" aria-label="Переваги студії">
               <span data-i18n="heroBadgeOne">2D-5D об'єми</span>
@@ -78,7 +83,15 @@
           <div class="section-heading">
             <p class="eyebrow" data-i18n="bookingEyebrow">Онлайн-запис</p>
             <h2 data-i18n="bookingTitle">Забронюйте свій візит</h2>
-            <p data-i18n="bookingCopy">Кілька деталей - і ваш час зарезервовано для красивого, чистого результату.</p>
+            <p data-i18n="bookingCopy">
+              Оберіть послугу, дату й час - ми підтвердимо візит і підготуємо все до вашого приходу.
+            </p>
+          </div>
+
+          <div class="client-trust-row">
+            <span data-i18n="trustOne">Акуратна ізоляція</span>
+            <span data-i18n="trustTwo">Індивідуальний підбір</span>
+            <span data-i18n="trustThree">Безпечні матеріали</span>
           </div>
 
           <div class="booking-steps" aria-label="Кроки запису">
@@ -95,7 +108,7 @@
             <div>
               <span>3</span>
               <strong data-i18n="stepThreeTitle">Підтвердження</strong>
-              <p data-i18n="stepThreeCopy">Після бронювання адміністратор бачить ваш запис.</p>
+              <p data-i18n="stepThreeCopy">Отримаєте підтвердження, і ми підготуємося до візиту.</p>
             </div>
           </div>
 
@@ -117,26 +130,24 @@
                 <span data-i18n="name">Ім'я</span>
                 <input id="client-name" name="clientName" type="text" autocomplete="name" required />
               </label>
-
               <label>
                 <span data-i18n="phone">Телефон</span>
-                <input id="client-phone" name="clientPhone" type="tel" autocomplete="tel" placeholder="+380..." required />
+                <input id="client-phone" name="clientPhone" type="tel" autocomplete="tel" required />
               </label>
             </div>
 
             <label>
               <span data-i18n="service">Послуга</span>
-              <select id="service" name="service" required></select>
+              <select id="service" name="service"></select>
             </label>
 
-            <div id="service-details" class="service-details"></div>
+            <div id="service-details" class="service-details" aria-live="polite"></div>
 
             <div class="form-grid">
               <label>
                 <span data-i18n="date">Дата</span>
                 <input id="date" name="date" type="date" required />
               </label>
-
               <label>
                 <span data-i18n="time">Час</span>
                 <select id="time" name="time" required></select>
@@ -148,11 +159,11 @@
               <textarea id="note" name="note" rows="3"></textarea>
             </label>
 
-            <button class="primary-button" type="submit" data-i18n="confirmBooking">Підтвердити запис</button>
-            <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+            <button class="primary-button full-width" type="submit" data-i18n="confirmBooking">Підтвердити запис</button>
+            <p id="form-message" class="form-message" aria-live="polite"></p>
           </form>
 
-          <div class="client-request">
+          <section class="client-request">
             <div class="section-heading compact-heading">
               <p class="eyebrow" data-i18n="requestEyebrow">Зміни запису</p>
               <h3 data-i18n="requestTitle">Потрібно змінити або скасувати?</h3>
@@ -163,16 +174,16 @@
               <div class="form-grid">
                 <label>
                   <span data-i18n="name">Ім'я</span>
-                  <input id="request-name" type="text" required />
+                  <input id="request-name" type="text" autocomplete="name" required />
                 </label>
                 <label>
                   <span data-i18n="phone">Телефон</span>
-                  <input id="request-phone" type="tel" required />
+                  <input id="request-phone" type="tel" autocomplete="tel" required />
                 </label>
               </div>
               <label>
                 <span data-i18n="requestType">Тип заявки</span>
-                <select id="request-type">
+                <select id="request-type" required>
                   <option value="change" data-i18n="requestChange">Змінити запис</option>
                   <option value="cancel" data-i18n="requestCancel">Скасувати запис</option>
                 </select>
@@ -182,28 +193,26 @@
                 <textarea id="request-message" rows="3" required></textarea>
               </label>
               <button class="ghost-button full-width" type="submit" data-i18n="sendRequest">Надіслати адміністратору</button>
-              <p id="request-status" class="form-message" role="status" aria-live="polite"></p>
+              <p id="request-status" class="form-message" aria-live="polite"></p>
             </form>
-          </div>
+          </section>
         </section>
       </section>
 
-      <section id="admin-view" class="view admin-layout" aria-labelledby="admin-title" hidden>
-        <section id="admin-workspace" class="workspace-panel control-room">
-          <div class="section-heading row-heading">
-            <div>
+      <section id="admin-view" class="view" hidden>
+        <div class="workspace-panel">
+          <div class="row-heading">
+            <div class="section-heading">
               <p class="eyebrow" data-i18n="adminEyebrow">Кабінет адміністратора</p>
-              <h2 id="admin-title" data-i18n="adminTitle">Повний контроль записів</h2>
-              <p data-i18n="adminCopy">
-                Налаштовуйте робочі дні, години прийому, вихідні, записи та заявки клієнтів.
-              </p>
+              <h2 data-i18n="adminTitle">Повний контроль записів</h2>
+              <p data-i18n="adminCopy">Налаштовуйте робочі дні, години прийому, вихідні, записи та заявки клієнтів.</p>
             </div>
             <button id="enable-notifications" class="ghost-button" type="button" data-i18n="enableNotifications">
               Увімкнути сповіщення
             </button>
           </div>
 
-          <div class="stats-row" aria-label="Booking statistics">
+          <div class="stats-row">
             <div>
               <span id="today-count">0</span>
               <p data-i18n="today">сьогодні</p>
@@ -228,34 +237,32 @@
                 <p class="eyebrow" data-i18n="scheduleEyebrow">Графік</p>
                 <h3 data-i18n="scheduleTitle">Робочі дні та години</h3>
               </div>
-              <form id="schedule-form" class="schedule-list"></form>
+              <div id="schedule-form" class="schedule-list"></div>
               <button id="save-schedule" class="primary-button full-width" type="button" data-i18n="saveSchedule">
                 Зберегти графік
               </button>
-              <p id="schedule-message" class="form-message" role="status" aria-live="polite"></p>
-            </section>
 
-            <section class="admin-section">
-              <div class="section-heading compact-heading">
-                <p class="eyebrow" data-i18n="daysOffEyebrow">Вихідні</p>
-                <h3 data-i18n="daysOffTitle">Закриті дати</h3>
-              </div>
-              <form id="day-off-form" class="booking-form">
-                <label>
-                  <span data-i18n="date">Дата</span>
-                  <input id="day-off-date" type="date" required />
-                </label>
-                <label>
-                  <span data-i18n="reason">Причина</span>
-                  <input id="day-off-reason" type="text" />
-                </label>
+              <form id="day-off-form" class="booking-form lower-grid">
+                <div class="section-heading compact-heading">
+                  <p class="eyebrow" data-i18n="daysOffEyebrow">Вихідні</p>
+                  <h3 data-i18n="daysOffTitle">Закриті дати</h3>
+                </div>
+                <div class="form-grid">
+                  <label>
+                    <span data-i18n="date">Дата</span>
+                    <input id="day-off-date" type="date" required />
+                  </label>
+                  <label>
+                    <span data-i18n="reason">Причина</span>
+                    <input id="day-off-reason" type="text" />
+                  </label>
+                </div>
                 <button class="ghost-button full-width" type="submit" data-i18n="addDayOff">Додати вихідний</button>
               </form>
               <div id="days-off-list" class="mini-list"></div>
+              <p id="schedule-message" class="form-message" aria-live="polite"></p>
             </section>
-          </div>
 
-          <div class="admin-grid lower-grid">
             <section class="admin-section">
               <div class="section-heading compact-heading">
                 <p class="eyebrow" data-i18n="manualBookingEyebrow">Адміністратор</p>
@@ -274,7 +281,7 @@
                 </div>
                 <label>
                   <span data-i18n="service">Послуга</span>
-                  <select id="admin-service" required></select>
+                  <select id="admin-service"></select>
                 </label>
                 <div class="form-grid">
                   <label>
@@ -288,15 +295,13 @@
                 </div>
                 <label>
                   <span data-i18n="comment">Коментар</span>
-                  <textarea id="admin-note" rows="2"></textarea>
+                  <textarea id="admin-note" rows="3"></textarea>
                 </label>
                 <button class="primary-button full-width" type="submit" data-i18n="createBooking">Створити запис</button>
-                <p id="admin-booking-message" class="form-message" role="status" aria-live="polite"></p>
+                <p id="admin-booking-message" class="form-message" aria-live="polite"></p>
               </form>
-            </section>
 
-            <section class="admin-section">
-              <div class="section-heading compact-heading">
+              <div class="section-heading compact-heading lower-grid">
                 <p class="eyebrow" data-i18n="clientRequestsEyebrow">Заявки клієнтів</p>
                 <h3>
                   <span data-i18n="clientRequestsTitle">Вхідні повідомлення</span>
@@ -308,8 +313,8 @@
           </div>
 
           <section class="admin-section appointments-section">
-            <div class="section-heading row-heading">
-              <div>
+            <div class="row-heading">
+              <div class="section-heading compact-heading">
                 <p class="eyebrow" data-i18n="bookingsEyebrow">Календар</p>
                 <h3 data-i18n="bookingsTitle">Усі записи</h3>
               </div>
@@ -324,17 +329,17 @@
             </div>
             <div id="bookings-list" class="bookings-list"></div>
           </section>
-        </section>
+        </div>
       </section>
 
-      <section id="share-view" class="view share-layout" aria-labelledby="share-title" hidden>
+      <section id="share-view" class="view" hidden>
         <section class="workspace-panel">
           <div class="section-heading">
             <p class="eyebrow" data-i18n="shareEyebrow">Для Instagram, сайту та візиток</p>
-            <h2 id="share-title" data-i18n="shareTitle">Посилання та QR-код</h2>
-            <p class="panel-copy" data-i18n="shareCopy">
-              Після публікації вставте сюди публічне посилання. QR-код можна розмістити в сторіс, на рецепції
-              або в друкованих матеріалах.
+            <h2 data-i18n="shareTitle">Посилання та QR-код</h2>
+            <p data-i18n="shareCopy">
+              Після публікації вставте сюди публічне посилання. QR-код можна розмістити в сторіс, на рецепції або в
+              друкованих матеріалах.
             </p>
           </div>
 
@@ -342,26 +347,27 @@
             <div class="link-tools">
               <label>
                 <span data-i18n="publicLink">Публічне посилання на запис</span>
-                <input id="public-link" type="url" placeholder="https://your-salon.example/booking" />
+                <input id="public-link" type="url" />
               </label>
               <div class="button-row">
                 <button id="use-current-link" class="ghost-button" type="button" data-i18n="useCurrentLink">Взяти поточне</button>
                 <button id="copy-link" class="primary-button compact" type="button" data-i18n="copyLink">Скопіювати</button>
               </div>
-              <p id="share-message" class="form-message" role="status" aria-live="polite"></p>
+              <p id="share-message" class="form-message" aria-live="polite"></p>
             </div>
 
             <div class="qr-panel">
-              <img id="qr-code" alt="QR code" />
-              <a id="download-qr" class="ghost-button download-link" href="#" download="lash-atelier-qr.png" data-i18n="downloadQr">
-                Завантажити QR
-              </a>
+              <img id="qr-code" alt="QR-код для запису" />
+              <a id="download-qr" class="download-link" download="lash-booking-qr.png" data-i18n="downloadQr">Завантажити QR</a>
             </div>
           </div>
         </section>
       </section>
     </main>
 
-    <script src="app.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script defer src="config.js"></script>
+    <script defer src="database.js"></script>
+    <script defer src="app.js"></script>
   </body>
 </html>

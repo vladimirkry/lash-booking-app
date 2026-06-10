@@ -173,18 +173,13 @@ main {
 
 .studio-hero {
   position: relative;
-  display: flex;
+  display: grid;
+  grid-template-rows: minmax(23rem, 1fr) auto;
   min-height: 45rem;
   overflow: hidden;
   border-radius: 1rem;
   color: #fff;
-  background:
-    linear-gradient(90deg, rgba(16, 16, 20, 0.9) 0%, rgba(16, 16, 20, 0.68) 39%, rgba(16, 16, 20, 0.16) 72%),
-    linear-gradient(0deg, rgba(16, 16, 20, 0.78), rgba(16, 16, 20, 0.06) 48%, rgba(16, 16, 20, 0.28)),
-    url("lash-hero-web.jpg"),
-    url("assets/lash-hero-web.jpg");
-  background-size: cover;
-  background-position: center;
+  background: #111114;
   box-shadow: var(--shadow);
 }
 
@@ -197,53 +192,53 @@ main {
     linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
   background-size: 36px 36px;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1));
+  z-index: 1;
+  pointer-events: none;
 }
 
-.hero-art span {
+.hero-photo-wrap {
+  position: relative;
+  overflow: hidden;
+  min-height: 23rem;
+  background: #1c1c20;
+}
+
+.hero-photo-wrap::after {
+  content: "";
   position: absolute;
-  border: 1px solid rgba(255, 255, 255, 0.58);
-  border-radius: 999px 999px 48% 48%;
-  transform-origin: center bottom;
-  box-shadow:
-    inset 0 -2rem 0 rgba(255, 255, 255, 0.11),
-    0 2rem 3rem rgba(0, 0, 0, 0.24);
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(17, 17, 20, 0.06) 0%, rgba(17, 17, 20, 0.18) 44%, rgba(17, 17, 20, 0.9) 100%),
+    linear-gradient(90deg, rgba(17, 17, 20, 0.7) 0%, rgba(17, 17, 20, 0.08) 46%, rgba(17, 17, 20, 0.18) 100%);
+  pointer-events: none;
+}
+
+.hero-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 23rem;
+  object-fit: cover;
+  object-position: center right;
+  filter: saturate(1.06) contrast(1.02);
 }
 
 .hero-art {
   display: none;
 }
 
-.hero-art span:nth-child(1) {
-  right: 10%;
-  bottom: 17%;
-  width: min(14rem, 45%);
-  aspect-ratio: 1 / 1.7;
-  transform: rotate(-17deg);
-}
-
-.hero-art span:nth-child(2) {
-  right: 29%;
-  bottom: 24%;
-  width: min(9rem, 32%);
-  aspect-ratio: 1 / 1.65;
-  opacity: 0.62;
-  transform: rotate(8deg);
-}
-
-.hero-art span:nth-child(3) {
-  right: -3%;
-  bottom: 35%;
-  width: min(8rem, 28%);
-  aspect-ratio: 1 / 1.65;
-  opacity: 0.45;
-  transform: rotate(-33deg);
+.hero-art span {
+  display: none;
 }
 
 .hero-content {
   position: relative;
-  z-index: 1;
-  align-self: end;
+  z-index: 2;
+  align-self: stretch;
   padding: clamp(1.3rem, 4vw, 2.3rem);
+  background:
+    linear-gradient(180deg, rgba(17, 17, 20, 0.82), rgba(17, 17, 20, 0.96)),
+    #111114;
 }
 
 .eyebrow {
@@ -273,9 +268,9 @@ h3 {
 }
 
 h1 {
-  max-width: 12ch;
-  font-size: clamp(2.45rem, 6.6vw, 5.45rem);
-  line-height: 0.91;
+  max-width: 15ch;
+  font-size: clamp(2.25rem, 5.4vw, 4.45rem);
+  line-height: 0.96;
 }
 
 h2 {
@@ -401,6 +396,23 @@ h3 {
   margin: 0.55rem 0 0;
   color: var(--muted);
   line-height: 1.6;
+}
+
+.client-trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1rem;
+}
+
+.client-trust-row span {
+  border: 1px solid rgba(164, 73, 104, 0.14);
+  border-radius: 999px;
+  color: var(--plum);
+  background: rgba(164, 73, 104, 0.08);
+  padding: 0.48rem 0.68rem;
+  font-size: 0.8rem;
+  font-weight: 900;
 }
 
 .row-heading {
@@ -897,12 +909,17 @@ textarea:focus {
   }
 
   .studio-hero {
+    grid-template-rows: minmax(20rem, 0.9fr) auto;
     min-height: 34rem;
-    background-position: center right;
+  }
+
+  .hero-photo-wrap,
+  .hero-photo {
+    min-height: 20rem;
   }
 
   h1 {
-    max-width: 13ch;
+    max-width: 16ch;
   }
 }
 
@@ -951,14 +968,24 @@ textarea:focus {
   }
 
   .studio-hero {
-    min-height: 30rem;
+    grid-template-rows: 17rem auto;
+    min-height: auto;
     border-radius: 0.85rem;
+  }
+
+  .hero-photo-wrap,
+  .hero-photo {
+    min-height: 17rem;
+  }
+
+  .hero-photo {
+    object-position: center;
+  }
+
+  .hero-photo-wrap::after {
     background:
-      linear-gradient(0deg, rgba(16, 16, 20, 0.9), rgba(16, 16, 20, 0.3) 58%, rgba(16, 16, 20, 0.24)),
-      url("lash-hero-web.jpg"),
-      url("assets/lash-hero-web.jpg");
-    background-size: cover;
-    background-position: 58% center;
+      linear-gradient(180deg, rgba(17, 17, 20, 0.02) 0%, rgba(17, 17, 20, 0.2) 52%, rgba(17, 17, 20, 0.9) 100%),
+      linear-gradient(90deg, rgba(17, 17, 20, 0.35), rgba(17, 17, 20, 0.04));
   }
 
   .hero-content {
@@ -966,9 +993,9 @@ textarea:focus {
   }
 
   h1 {
-    max-width: 11ch;
-    font-size: clamp(2.15rem, 13vw, 3.75rem);
-    line-height: 0.94;
+    max-width: 15ch;
+    font-size: clamp(2rem, 10vw, 3.15rem);
+    line-height: 0.98;
   }
 
   .hero-content p:not(.eyebrow) {

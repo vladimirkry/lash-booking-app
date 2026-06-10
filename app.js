@@ -88,8 +88,8 @@ const I18N = {
     navAdmin: "Кабінет",
     navShare: "QR / Посилання",
     heroEyebrow: "Lash studio booking",
-    heroTitle: "Обери час - ми подбаємо про погляд",
-    heroCopy: "Онлайн-запис на нарощення вій 2D-5D. Зручний час, охайна робота і результат, який підкреслює саме вас.",
+    heroTitle: "Запишіться на вії, які підкреслять ваш погляд",
+    heroCopy: "Нарощення вій 2D-5D з акуратним підбором об'єму, вигину та довжини під вашу форму очей.",
     heroBadgeOne: "2D-5D об'єми",
     heroBadgeTwo: "від 45 €",
     heroBadgeThree: "акуратний натуральний ефект",
@@ -97,13 +97,16 @@ const I18N = {
     heroNoteCopy: "Підберемо вигин, довжину та щільність під форму очей.",
     bookingEyebrow: "Онлайн-запис",
     bookingTitle: "Забронюйте свій візит",
-    bookingCopy: "Кілька деталей - і ваш час зарезервовано для красивого, чистого результату.",
+    bookingCopy: "Оберіть послугу, дату й час - ми підтвердимо візит і підготуємо все до вашого приходу.",
+    trustOne: "Акуратна ізоляція",
+    trustTwo: "Індивідуальний підбір",
+    trustThree: "Безпечні матеріали",
     stepOneTitle: "Бажаний ефект",
     stepOneCopy: "Натуральний, виразний або максимально об'ємний погляд.",
     stepTwoTitle: "Зручний слот",
     stepTwoCopy: "Оберіть час, який уже вільний у графіку майстра.",
     stepThreeTitle: "Підтвердження",
-    stepThreeCopy: "Після бронювання адміністратор бачить ваш запис.",
+    stepThreeCopy: "Отримаєте підтвердження, і ми підготуємося до візиту.",
     visualTitle: "Охайна лінія, м'який об'єм",
     visualCopy: "Підберемо ефект так, щоб вії виглядали доглянуто і не перевантажували погляд.",
     name: "Ім'я",
@@ -197,8 +200,8 @@ const I18N = {
     navAdmin: "Panel",
     navShare: "QR / Link",
     heroEyebrow: "Lash studio booking",
-    heroTitle: "Wybierz termin - my zadbamy o spojrzenie",
-    heroCopy: "Rezerwacja online przedłużania rzęs 2D-5D. Wygodny termin, staranna praca i efekt dopasowany do Ciebie.",
+    heroTitle: "Umów rzęsy, które podkreślą Twoje spojrzenie",
+    heroCopy: "Przedłużanie rzęs 2D-5D z dopasowaniem objętości, skrętu i długości do kształtu oka.",
     heroBadgeOne: "objętości 2D-5D",
     heroBadgeTwo: "od 45 €",
     heroBadgeThree: "czysty naturalny efekt",
@@ -206,13 +209,16 @@ const I18N = {
     heroNoteCopy: "Dobierzemy skręt, długość i gęstość do kształtu oka.",
     bookingEyebrow: "Rezerwacja online",
     bookingTitle: "Zarezerwuj wizytę",
-    bookingCopy: "Kilka szczegółów i Twój termin jest zarezerwowany dla pięknego, czystego efektu.",
+    bookingCopy: "Wybierz usługę, datę i godzinę - potwierdzimy wizytę i przygotujemy wszystko na Twój przyjazd.",
+    trustOne: "Dokładna izolacja",
+    trustTwo: "Indywidualne dopasowanie",
+    trustThree: "Bezpieczne materiały",
     stepOneTitle: "Wybrany efekt",
     stepOneCopy: "Naturalne, wyraziste albo maksymalnie pełne spojrzenie.",
     stepTwoTitle: "Wolny termin",
     stepTwoCopy: "Wybierz godzinę, która jest dostępna w grafiku stylistki.",
     stepThreeTitle: "Potwierdzenie",
-    stepThreeCopy: "Po rezerwacji administrator widzi Twoją wizytę.",
+    stepThreeCopy: "Otrzymasz potwierdzenie, a my przygotujemy wizytę.",
     visualTitle: "Czysta linia, miękka objętość",
     visualCopy: "Dobierzemy efekt tak, aby rzęsy wyglądały zadbanie i nie obciążały spojrzenia.",
     name: "Imię",
@@ -305,8 +311,8 @@ const I18N = {
     navAdmin: "Beheer",
     navShare: "QR / Link",
     heroEyebrow: "Lash studio booking",
-    heroTitle: "Kies je tijd - wij zorgen voor je blik",
-    heroCopy: "Online boeken voor wimperextensions 2D-5D. Een passend moment, zorgvuldig werk en een resultaat dat bij jou past.",
+    heroTitle: "Boek wimpers die je blik versterken",
+    heroCopy: "Wimperextensions 2D-5D met volume, krul en lengte afgestemd op jouw oogvorm.",
     heroBadgeOne: "2D-5D volumes",
     heroBadgeTwo: "vanaf 45 €",
     heroBadgeThree: "net natuurlijk effect",
@@ -314,13 +320,16 @@ const I18N = {
     heroNoteCopy: "We stemmen krul, lengte en dichtheid af op je oogvorm.",
     bookingEyebrow: "Online boeken",
     bookingTitle: "Reserveer je bezoek",
-    bookingCopy: "Een paar details en je tijd is gereserveerd voor een mooie, schone finish.",
+    bookingCopy: "Kies je behandeling, datum en tijd - wij bevestigen je bezoek en bereiden alles voor.",
+    trustOne: "Nauwkeurige isolatie",
+    trustTwo: "Persoonlijke keuze",
+    trustThree: "Veilige materialen",
     stepOneTitle: "Gewenst effect",
     stepOneCopy: "Natuurlijk, expressief of maximaal volle wimpers.",
     stepTwoTitle: "Vrij moment",
     stepTwoCopy: "Kies een tijd die beschikbaar is in de planning.",
     stepThreeTitle: "Bevestiging",
-    stepThreeCopy: "Na het boeken ziet de beheerder je afspraak.",
+    stepThreeCopy: "Je krijgt een bevestiging en wij bereiden je bezoek voor.",
     visualTitle: "Strakke lijn, zacht volume",
     visualCopy: "We kiezen het effect zodat je wimpers verzorgd ogen zonder je blik te verzwaren.",
     name: "Naam",
@@ -413,8 +422,8 @@ const I18N = {
     navAdmin: "Admin",
     navShare: "QR / Link",
     heroEyebrow: "Lash studio booking",
-    heroTitle: "Choose a time - we will take care of the look",
-    heroCopy: "Online booking for 2D-5D eyelash extensions. A convenient time, precise work, and a result made for you.",
+    heroTitle: "Book lashes that define your look",
+    heroCopy: "2D-5D eyelash extensions with volume, curl, and length matched to your eye shape.",
     heroBadgeOne: "2D-5D volumes",
     heroBadgeTwo: "from 45 €",
     heroBadgeThree: "clean natural effect",
@@ -422,13 +431,16 @@ const I18N = {
     heroNoteCopy: "We match curl, length, and density to your eye shape.",
     bookingEyebrow: "Online booking",
     bookingTitle: "Reserve your visit",
-    bookingCopy: "A few details and your time is reserved for a beautiful, clean finish.",
+    bookingCopy: "Choose your service, date, and time - we will confirm the visit and prepare everything for you.",
+    trustOne: "Precise isolation",
+    trustTwo: "Personal matching",
+    trustThree: "Safe materials",
     stepOneTitle: "Desired effect",
     stepOneCopy: "Natural, defined, or maximum-volume lashes.",
     stepTwoTitle: "Open slot",
     stepTwoCopy: "Choose a time that is already available in the schedule.",
     stepThreeTitle: "Confirmation",
-    stepThreeCopy: "After booking, the admin sees your appointment.",
+    stepThreeCopy: "You receive confirmation, and we prepare for your visit.",
     visualTitle: "Clean line, soft volume",
     visualCopy: "We choose the effect so your lashes look polished without weighing down your eyes.",
     name: "Name",
@@ -591,8 +603,9 @@ adminDate.value = todayIso;
 dayOffDate.min = todayIso;
 languageSelect.value = currentLang;
 
-seedDemoData();
 renderAll();
+hydrateRemoteData();
+seedDemoData();
 registerServiceWorker();
 
 window.addEventListener("hashchange", renderRoute);
@@ -1132,7 +1145,17 @@ function isWorkingDate(dateValue) {
 }
 
 function loadSettings() {
-  const defaultSettings = {
+  const defaultSettings = getDefaultSettings();
+
+  try {
+    return mergeSettings(defaultSettings, JSON.parse(localStorage.getItem(STORAGE.settings)) ?? {});
+  } catch {
+    return defaultSettings;
+  }
+}
+
+function getDefaultSettings() {
+  return {
     slotStep: 30,
     weeklyHours: {
       sun: { enabled: false, start: "10:00", end: "16:00" },
@@ -1145,16 +1168,23 @@ function loadSettings() {
     },
     daysOff: [],
   };
+}
 
-  try {
-    return { ...defaultSettings, ...(JSON.parse(localStorage.getItem(STORAGE.settings)) ?? {}) };
-  } catch {
-    return defaultSettings;
-  }
+function mergeSettings(base, next = {}) {
+  return {
+    ...base,
+    ...next,
+    weeklyHours: {
+      ...base.weeklyHours,
+      ...(next.weeklyHours || {}),
+    },
+    daysOff: Array.isArray(next.daysOff) ? next.daysOff : base.daysOff,
+  };
 }
 
 function saveSettings() {
   localStorage.setItem(STORAGE.settings, JSON.stringify(settings));
+  window.LashDatabase?.saveSettings(settings);
 }
 
 function loadArray(key) {
@@ -1167,9 +1197,20 @@ function loadArray(key) {
 
 function saveArray(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
+
+  if (key === STORAGE.bookings) {
+    window.LashDatabase?.replaceBookings(value);
+  }
+
+  if (key === STORAGE.requests) {
+    window.LashDatabase?.replaceRequests(value);
+  }
 }
 
 function seedDemoData() {
+  const demoMode = new URLSearchParams(window.location.search).get("demo") === "1";
+  if (!demoMode || window.LashDatabase?.isConfigured()) return;
+
   if (!bookings.length) {
     bookings = [
       {
@@ -1201,6 +1242,22 @@ function seedDemoData() {
     ];
     saveArray(STORAGE.bookings, bookings);
   }
+}
+
+async function hydrateRemoteData() {
+  const remote = await window.LashDatabase?.loadAll();
+  if (!remote) return;
+
+  if (remote.settings) {
+    settings = mergeSettings(getDefaultSettings(), remote.settings);
+    localStorage.setItem(STORAGE.settings, JSON.stringify(settings));
+  }
+
+  bookings = Array.isArray(remote.bookings) ? remote.bookings : [];
+  clientRequests = Array.isArray(remote.requests) ? remote.requests : [];
+  localStorage.setItem(STORAGE.bookings, JSON.stringify(bookings));
+  localStorage.setItem(STORAGE.requests, JSON.stringify(clientRequests));
+  renderAll();
 }
 
 function notifyAdmin(text) {
@@ -1272,11 +1329,14 @@ function statusLabel(status) {
 }
 
 function getInitialLanguage() {
+  const params = new URLSearchParams(window.location.search);
+  const fromUrl = params.get("lang");
+  if (SUPPORTED_LANGS.includes(fromUrl)) return fromUrl;
+
   const stored = localStorage.getItem(STORAGE.language);
   if (SUPPORTED_LANGS.includes(stored)) return stored;
 
-  const browserLang = navigator.language.slice(0, 2);
-  return SUPPORTED_LANGS.includes(browserLang) ? browserLang : "uk";
+  return "uk";
 }
 
 function getAppMode() {
